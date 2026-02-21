@@ -1,6 +1,114 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    <h1>Hello World! My site is live.</h1>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackerNews: The Top 5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=JetBrains+Mono:wght@300&family=Playfair+Display:ital@1&display=swap');
+        
+        body { 
+            background-color: #fbfbfb; 
+            font-family: 'Inter', sans-serif;
+            color: #37352f;
+        }
+        .notion-card {
+            transition: all 0.2s ease-in-out;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .notion-card:hover {
+            background-color: #f1f1f1;
+            transform: translateY(-2px);
+        }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .serif { font-family: 'Playfair Display', serif; }
+        .gradient-text {
+            background: linear-gradient(90deg, #000, #666);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="p-8 md:p-24">
+
+    <header class="max-w-4xl mx-auto mb-16">
+        <div class="flex items-center space-x-4 mb-4">
+            <span class="text-4xl">📂</span>
+            <h1 class="text-5xl font-bold tracking-tight">HackerNews <span class="serif italic font-light text-gray-400 text-4xl">Top 5 Articles</span></h1>
+        </div>
+        <div class="flex space-x-3 text-sm mono text-gray-500 border-b border-gray-200 pb-4">
+            <span>Verified: Feb 2026</span>
+            <span>•</span>
+            <span>Curation: Artistic Brutalism</span>
+            <span>•</span>
+            <span class="text-green-600 animate-pulse">● System Live</span>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto grid gap-8">
+
+        <a href="https://milk.com/wall-o-shame/security_clearance.html" target="_blank" class="notion-card p-6 rounded-lg block">
+            <div class="flex items-start justify-between">
+                <div>
+                    <span class="text-xs mono uppercase tracking-widest text-red-500 font-bold">Priority 01 // Security</span>
+                    <h2 class="text-2xl font-bold mt-1">The Wall of Shame: Clearance Denied</h2>
+                    <p class="text-gray-500 mt-2 max-w-xl">A deep dive into the bureaucratic absurdity of security clearance logic. Why some doors remain locked forever.</p>
+                </div>
+                <span class="text-3xl grayscale hover:grayscale-0 transition">🚫</span>
+            </div>
+        </a>
+
+        <a href="https://thelocalstack.eu/posts/linkedin-identity-verification-privacy/" target="_blank" class="notion-card p-6 rounded-lg block border-l-4 border-black">
+            <div class="flex items-start justify-between">
+                <div>
+                    <span class="text-xs mono uppercase tracking-widest text-blue-500 font-bold">Priority 02 // Identity</span>
+                    <h2 class="text-2xl font-bold mt-1">LinkedIn: The Death of Privacy?</h2>
+                    <p class="text-gray-500 mt-2 max-w-xl">Identity verification is the new gatekeeper. An analysis of the data-tradeoff for a blue checkmark.</p>
+                </div>
+                <span class="text-3xl">🆔</span>
+            </div>
+        </a>
+
+        <a href="https://www.deadlanguagesociety.com/p/how-far-back-in-time-understand-english" target="_blank" class="notion-card p-6 rounded-lg block">
+            <div class="flex items-start justify-between">
+                <div>
+                    <span class="text-xs mono uppercase tracking-widest text-amber-600 font-bold">Priority 03 // Linguistics</span>
+                    <h2 class="text-2xl font-bold mt-1 serif italic uppercase tracking-tighter">How far back can you hear?</h2>
+                    <p class="text-gray-500 mt-2 max-w-xl">If you had a time machine, at what point would English become a foreign language? Tracing the decay of syntax.</p>
+                </div>
+                <span class="text-3xl">⏳</span>
+            </div>
+        </a>
+
+        <a href="https://f-droid.org/2026/02/20/twif.html" target="_blank" class="notion-card p-6 rounded-lg block bg-stone-900 text-white shadow-xl">
+            <div class="flex items-start justify-between">
+                <div>
+                    <span class="text-xs mono uppercase tracking-widest text-green-400 font-bold">Priority 04 // Open Source</span>
+                    <h2 class="text-2xl font-bold mt-1">This Week in F-Droid (TWIF)</h2>
+                    <p class="text-stone-400 mt-2 max-w-xl">The heartbeat of the 2026 Android ecosystem. Privacy-first updates from the frontier of mobile freedom.</p>
+                </div>
+                <span class="text-3xl">🤖</span>
+            </div>
+        </a>
+
+        <a href="https://nekonomicon.irixnet.org/" target="_blank" class="notion-card p-6 rounded-lg block border-2 border-dashed border-gray-300">
+            <div class="flex items-start justify-between">
+                <div>
+                    <span class="text-xs mono uppercase tracking-widest text-purple-500 font-bold">Priority 05 // Esoterica</span>
+                    <h2 class="text-2xl font-bold mt-1 underline decoration-purple-200">The NekoNomicon</h2>
+                    <p class="text-gray-500 mt-2 max-w-xl">IrixNet's gateway to the strange. A digital grimoire for the modern hardware enthusiast.</p>
+                </div>
+                <span class="text-3xl">🐈</span>
+            </div>
+        </a>
+
+    </main>
+
+    <footer class="max-w-4xl mx-auto mt-24 pb-12 opacity-30 hover:opacity-100 transition duration-500">
+        <div class="h-px bg-gray-300 w-full mb-8"></div>
+        <p class="mono text-xs text-center">END OF FEED // NO MORE DATA // [ESC] TO EXIT</p>
+    </footer>
+
+</body>
 </html>
